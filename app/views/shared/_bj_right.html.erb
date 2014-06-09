@@ -1,0 +1,41 @@
+<div class="index_main_right">
+  <div class="right_zngg">
+    <div class="bg">
+      <div class="tb"></div>
+      站内公告
+      <div class="order_gd">
+        <a href="http://www.zhongguozhixie.com.cn/news_list/11236852.html">更多&gt;&gt;</a>
+      </div>
+    </div>
+    <div id="zngggd" class="c" style="overflow:hidden;height:150px;width:180px; ">
+    <marquee onmouseout="this.start()" onmouseover="this.stop()" behavior="scroll" direction="up" scrollamount="2" scrolldelay="1" height="100%">
+        <div class="xd">
+      </div>
+      <% Catalog.find_by_name("站内公告").try(:articles).each do |article| %>
+        <div class="xd">
+          <%= link_to article.title, article  %>
+        </div>
+      <% end -%>
+      </marquee>
+    </div>
+  </div>
+  <div class="lefttype">
+    <div class="lefttypetitle"><span>会员登录</span></div>
+    <p style="font-size:12px;padding:3px">
+      会员编号：<input id="cardnumber" name="" type="text" class="certificate_input" value=""></p>
+    <p style="font-size:12px;padding:3px">
+      姓&nbsp;&nbsp;&nbsp;&nbsp;名：<input id="cardnumber" name="" type="text" class="certificate_input" value=""></p>
+    <p align="center"><input name="Input" type="button" value="登 录" onclick="certificate()" border="0" class="input_button"></p>
+    <div class="marg10"></div>
+  </div>
+
+  <div class="lefttype">
+    <div class="lefttypetitle"><span>考证信息</span></div>
+    <p style="font-size:12px;padding:3px">
+      会员编号：<input id="cardnumber" name="" type="text" class="certificate_input" value=""></p>
+    <p style="font-size:12px;padding:3px">
+      姓&nbsp;&nbsp;&nbsp;&nbsp;名：<input id="cardnumber" name="" type="text" class="certificate_input" value=""></p>
+    <p align="center"><input name="Input" type="button" value="查 询" onclick="certificate()" border="0" class="input_button"></p>
+    <div class="marg10"></div>
+  </div>
+</div>

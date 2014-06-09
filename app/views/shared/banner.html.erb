@@ -1,0 +1,37 @@
+<div class="box_header">
+  <div class="header01">
+    <span>您好，欢迎来到好孕妈妈！<%= current_user.try(:admin?) %></span>
+<!-- 
+    <ul>
+      <li><a href="#" class="weibo"></a>  </li>
+      <li><a href="#">设为首页</a> | </li>
+      <li><a href="#">加入收藏</a></li> 
+    </ul>
+-->
+  </div>
+  <div class="header02">
+    <div class="helogo"><%= picture("LOGO", '211px', '84px') %></div>
+    <div class="heby"><img src="/images/main/header_byimg.png" width="197" height="100" border="0" /></div>
+    <div class="heimg"><img src="/images/main/header_picimg.png" width="274" height="100" border="0" /></div>
+    <div class="hetel"><img src="/images/main/header_tel.png" width="231" height="100" border="0" /></div>
+    <div class="heerweima"><%= link_to image_tag(Picture.on("首页二维码").try(:first).try(:file).try(:url).to_s, width: '65px', height: '64px', border: 0, alt: '首页二维码') %>
+    </div>
+  </div>
+    
+  <div class="header_nav">
+    <div class="nav-left"></div>
+    <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="#">品牌故事</a></li>
+      <li><a href="#">胎教课堂</a></li>
+      <li><a href="#">VIP全程胎教服务</a></li>
+      <li><a href="#">收费标准</a></li>
+      <li><a href="#">月子服务</a></li>
+      <li><a href="#">产后服务</a></li>
+      <li><a href="#">母婴服务</a></li>
+      <li><a href="#">孕育知识</a></li>
+      <li style="background:none;"><a href="#">联系我们</a></li>
+    </ul>
+    <div class="nav-right"></div>
+  </div>
+</div>

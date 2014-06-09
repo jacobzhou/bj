@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="私人营养师定制现已在北京、上海、浙江、湖北、四川、三亚和长春等地建立服务网络。">
+  <link rel="shortcut icon" href="http://www.rahcb.com/favicon.ico">
+  <!--[if IE 6]>
+    <%= javascript_include_tag "iepng" %>
+  <![endif]-->
+  <title>私人营养师定制</title>
+  <%= stylesheet_link_tag "common", "index", "custom", "global" %>
+  <%= javascript_include_tag :defaults, "jquery.marquee", "index" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<!-- header -->
+<%= render "shared/header" %>
+
+<div class="index-layout">
+  <%= yield %>
+</div>
+
+<!-- footer -->
+<%= render "shared/footer" %>
+
+</body>
+</html>

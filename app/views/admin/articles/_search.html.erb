@@ -1,0 +1,8 @@
+<%= form_for @search, :url => admin_articles_path, :html => {:method => :get} do |f| %>
+  <div class="search_box">
+    <span>标题：<%= f.text_field :title_contains %></span>
+    <span>栏目：<%= f.hidden_field :catalog_id_eq %></span>
+    <%= dynamic_selects Catalog, @search.catalog_id_eq, :search_catalog_id_eq %>
+  </div>
+  <%= render "admin/shared/search_bottom", :f => f %>
+ <% end -%>

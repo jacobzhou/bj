@@ -1,0 +1,395 @@
+<%= javascripts "jquery.KinSlideshow-1.2.1.min.js" %>
+<script>
+  $(function(){
+    $("#KinSlideshow").KinSlideshow();
+  })
+</script>
+<div class="maincont_banner">
+  <!-- 幻灯片 -->
+  <div class="banner_img">
+    <div id="KinSlideshow" style="visibility:hidden;">
+      <% Picture.on("LOGO").each do |pic| %>
+        <%= picture(pic, "692", "329") %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="banner_rigt">
+    <div class="banner_rigt_tskc">
+      <div class="tskc_top"><img src="/images/main/tskc_titbg.png" width="260" height="47" border="0" /></div>
+      <!-- 特色课程 -->
+      <div class="tskc_cont">
+        <ul>
+          <% Catalog.articles("创意课程").each do |article| %>
+            <li><%= link_to_blank article.title, article %></li>
+          <% end %>
+        </ul>
+        <div class="banner_rigt_gg"><a href="#"><img src="/images/main/bbkt_img.png" width="241" height="63" border="0" /></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="banner_bot"><img src="/images/main/banner_bg.png" width="980" height="13" border="0" /></div>
+
+<!-- 指示图片 -->
+<div class="maincont_liimg">
+  <ul>
+    <li><a href="#"><img src="/images/main/xzhmm_img.png" width="192" height="61" border="0" /></a></li>
+    <li><a href="#"><img src="/images/main/xzhmm_img02.png" width="192" height="61" border="0" /></a></li>
+    <li><a href="#"><img src="/images/main/xzhmm_img03.png" width="192" height="61" border="0" /></a></li>
+    <li><a href="#"><img src="/images/main/xzhmm_img04.png" width="192" height="61" border="0" /></a></li>
+    <li><a href="#"><img src="/images/main/xzhmm_img05.png" width="192" height="61" border="0" /></a></li>
+  </ul>
+</div>
+
+<!-- 最新活动 -->
+<div class="zxhdcont_cont">
+  <div class="huodong_left">
+    <!--zuixinhuodong-->
+    <div class="zxhd_div">
+      <div class="zxhd_div_top">
+        <span><a href="#"><img src="/images/main/zxhd_titbt.png" width="75" height="30" border="0" /></a></span>
+        <a href="#">更多>></a>
+      </div>
+      <div class="zxhd_div_cont">
+        <ul>
+          <% Catalog.articles("瑜伽课程").each do |article| %>
+            <li>
+              <%= link_to image_tag(article.cover.url, width: '267', height: '158', border: 0) %>
+              <span><%= link(article) %></span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 好孕妈妈动态 -->
+    <div class="hymmhd_div">
+      <div class="hymmhd_divtop">
+        <span><a href="#"><img src="/images/main/hymmdt_tittb.png" width="106" height="30" border="0" /></a></span>
+        <a href="#">更多>></a>
+      </div>
+      <div class="hymmhd_divcont">
+        <% mts = Catalog.articles("穿衣")[0..5] %>
+        <% mt = mts.first %>
+        <div class="hymmhd_tuijian">
+          <span>
+            <%= link_to_blank image_tag(mt.cover.url, width:90, height:65), mt %>
+          </span>
+          <div class="hymm_tjp">
+            <b><%= link_to_blank mt.title, mt %></b>
+            <p><%= truncate(mt.quote) %>
+              <%= link_to_blank "[详细]", mt %>
+            </p>
+          </div>
+        </div>
+
+        <div class="hymmhd_ulli">
+          <ul>
+            <% mts[1..5].each do |article| %>
+              <li><%= link(article) %><span><%= article.updated_at.to_date %></span></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 最新课表  -->
+  <div class="zxkb_right">
+    <div class="zxhd_div_top">
+        <span class="span01"><a href="#"><img src="/images/main/zxkb_tittb.png" width="177" height="22" border="0" /></a></span>
+        <a href="#">更多>></a>
+      </div>
+      <!--kebiao-->
+    <div class="zxkb_cont">     
+      <% Course.all[0..2].each do |course| %>
+        <div class="zxkb_divlist">
+          <div class="zxkb_divlistcont">
+            <div class="zxkb_divlist_left">
+              <h2><%= course.start_at.day %></h2>
+              <strong><%= course.start_at.strftime("%Y-%m") %></strong>
+            </div>
+            <div class="zxkb_divlist_cont">
+              <b><%= link_to course.name, article_path(course.article_id) %></b>
+              <p>地点：<%= course.place %> <%= course.time %></p>
+            </div>
+          </div>  
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="hy">
+  <!-- 选择好孕妈妈 -->
+  <div class="hymmhd_div">
+      <div class="hymmhd_divtop">
+        <span><a href="#"><img src="/images/main/hy-mm.png" width="109" height="31" /></a></span>
+        <a href="#">更多>></a>
+      </div>
+      <div class="hymmhd_divcont">
+        <% mts = Catalog.articles("穿衣")[0..5] %>
+        <% mt = mts.first %>
+        <div class="hymmhd_tuijian">
+          <span>
+            <%= link_to_blank image_tag(mt.cover.url, width:90, height:65), mt %>
+          </span>
+          <div class="hymm_tjp">
+            <b><%= link_to_blank mt.title, mt %></b>
+            <p>
+              <%= truncate(mt.quote) %>
+              <%= link_to_blank "[详细]", mt %>
+            </p>
+          </div>
+        </div>
+        <div class="hymmhd_ulli">
+          <ul>
+            <% mts[1..5].each do |article| %>
+              <li>
+                <%= link(article) %>
+                <span><%= article.updated_at.to_date %></span>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+  <!-- 专家团队 -->
+  <div class="hy-right">
+    <div class="right-head">
+      <img src="/images/main/zj.png" width="140" height="32" />
+    </div>
+    <div class="right-cont">
+      <img src="/images/main/xg.png" />
+    </div>
+  </div>
+
+</div>
+<div class="xian">
+</div>
+<!-- 胎教课程 -->
+<div class="tj-kt">
+  <div class="kt-left">
+  </div>
+  <div class="kt-right">
+    <div class="right-head">
+    </div>
+    <div class="right-cont">
+      <div class="cont-left">
+        <div class="cl-head">
+          <img src="/images/main/img-h.png" />
+          <span><p>I&nbsp;super</p>&nbsp;&nbsp;爱超级宝宝胎教体系</span>
+          <a href="#">更多>></a>
+        </div>
+        <div class="cl-cont">
+          <span><a href="#"><img src="/images/main/bb.png" width="111" height="108" /></a></span>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;以健康胎教，胎教瑜伽，营养胎教，音乐胎教，艺术胎教为主，以健康胎教，胎教瑜伽，营养胎教，音乐胎教，艺术胎教为主，以健康胎教，胎教瑜伽，营养胎教，音乐胎教，艺术胎教为主，以健康胎教，胎教瑜伽，营养胎教，音乐胎教，，</p>
+        </div>
+        <ul>
+          <li><img src="/images/main/ket-li.png" /><a href="#">小课堂大机会，互动分享长见（孕育保健，健康胎教，语言胎教，故事胎教）</a>
+          </li>
+          <li><img src="/images/main/ket-li.png" /><a href="#">小课堂大机会，互动分享长见（孕育保健，健康胎教，语言胎教，故事胎教）</a>
+          </li>
+          <li><img src="/images/main/ket-li.png" /><a href="#">小课堂大机会，互动分享长见（孕育保健，健康胎教，语言胎教，故事胎教）</a>
+          </li>
+          <li><img src="/images/main/ket-li.png" /><a href="#">小课堂大机会，互动分享长见（孕育保健，健康胎教，语言胎教，故事胎教）</a>
+          </li>
+          <li><img src="/images/main/ket-li.png" /><a href="#">小课堂大机会，互动分享长见（孕育保健，健康胎教，语言胎教，故事胎教）</a>
+          </li>
+          <li><img src="/images/main/ket-li.png" /><a href="#">小课堂大机会，互动分享长见（孕育保健，健康胎教，语言胎教，故事胎教）</a>
+          </li>
+          <li><img src="/images/main/ket-li.png" /><a href="#">小课堂大机会，互动分享长见（孕育保健，健康胎教，语言胎教，故事胎教）</a>
+          </li>
+          <li><img src="/images/main/ket-li.png" /><a href="#">小课堂大机会，互动分享长见（孕育保健，健康胎教，语言胎教，故事胎教）</a>
+          </li>
+          <li><img src="/images/main/ket-li.png" /><a href="#">小课堂大机会，互动分享长见（孕育保健，健康胎教，语言胎教，故事胎教）</a>
+          </li>
+        
+        </ul>
+      </div>
+      <div class="cont-right">
+        <div class="cr-head">
+          <span>主要课程内容</span>
+        </div>
+        <div class="cr-cont">
+          <span><a href="#"><img src="/images/main/bb-02.png"  width="158" height="153"/></a></span>
+          <ul>
+            <li>·<a href="#">[宝宝正常大便是啥样]</a></li>
+            <li>·<a href="#">[宝宝正常大便是啥样]</a></li>
+            <li>·<a href="#">[宝宝正常大便是啥样]</a></li>
+            <li>·<a href="#">[宝宝正常大便是啥样]</a></li>
+            <li>·<a href="#">[宝宝正常大便是啥样]</a></li>
+            <li>·<a href="#">[宝宝正常大便是啥样]</a></li>
+            <li>·<a href="#">[宝宝正常大便是啥样]</a></li>
+          </ul>
+        </div>
+        <div class="cr-bottom">
+          <div class="crb-head">
+            <img src="/images/main/img-h.png" />
+            <span>妈妈与宝宝成长之路</span>
+            <a href="#">更多>></a>
+          </div>
+          <ul>
+            <li><img src="/images/main/ket-li.png" /><a href="#">智慧妈妈—对自身与宝宝都有更深入的了解，更好的呵护宝宝</a></li>
+            <li><img src="/images/main/ket-li.png" /><a href="#">智慧妈妈—对自身与宝宝都有更深入的了解，更好的呵护宝宝</a></li>
+            <li><img src="/images/main/ket-li.png" /><a href="#">智慧妈妈—对自身与宝宝都有更深入的了解，更好的呵护宝宝</a></li>
+            <li><img src="/images/main/ket-li.png" /><a href="#">智慧妈妈—对自身与宝宝都有更深入的了解，更好的呵护宝宝</a></li>
+            <li><img src="/images/main/ket-li.png" /><a href="#">智慧妈妈—对自身与宝宝都有更深入的了解，更好的呵护宝宝</a></li>
+            <li><img src="/images/main/ket-li.png" /><a href="#">智慧妈妈—对自身与宝宝都有更深入的了解，更好的呵护宝宝</a></li>
+            <li><img src="/images/main/ket-li.png" /><a href="#">智慧妈妈—对自身与宝宝都有更深入的了解，更好的呵护宝宝</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="kt-rr">
+    <img src="/images/main/left.png" />
+    </div>
+    </div>
+    
+  </div>
+  
+</div>
+<div class="xian">
+</div>
+<!--chanhouxiufu-->
+<div class="chxf">
+  <div class="ch-left">
+  </div>
+  <div class="ch-right">
+    <div class="chr-head">
+    </div>
+    <div class="chr-cont">
+
+      <% Catalog.at("产后修复").articles.each do |article| %>
+        <div class="cc-c">
+          <b><%= article.title %></b>
+          <ul>
+            <% article.quote.split.each do |tag| %>
+             <li><%= link_to tag, article %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+<div class="xian">
+</div>
+<!--haoyunbaike-->
+<div class="hy-bk">
+  <div class="bk-left">
+  </div>
+  <div class="bk-right">
+    <div class="bkr-head">
+    </div>
+    <div class="bkr-cont">
+      <div class="cont-left">
+        <p><a href="#"><img src="/images/main/bk-p.png" width="272" height="170" /></a></p>
+        <div class="cccc">
+          <img src="/images/main/img-h.png" />
+          <span>百科全说</span>
+          <a href="#">更多>></a>
+        </div>
+        <ul>
+          <li><b>备孕期</b><span>></span>
+            <% Catalog.at("产后修复").children[0..1].each do |catalog| %>
+              <a href="#"><%= catalog.name %></a>
+            <% end %>
+          </li>
+          <li><b>怀孕期</b><span>></span><a href="#">孕期抽筋</a><a href="#">产兆</a><a href="#">胎位不正</a><a href="#">宫缩</a></li>
+          <li><b>产后期</b><span>></span><a href="#">贫血</a><a href="#">产后第一餐</a><a href="#">身体调理</a><a href="#">月子病</a></li>
+          <li><b>育儿期</b><span>></span><a href="#">病症查询</a><a href="#">韩式按摩</a><a href="#">宝宝营养餐</a></li>
+        </ul>
+      </div>
+      <div class="cont-right">
+
+        <div class="right-xx">
+          <div class="xx-head">
+            <img src="/images/main/xx-img.png" />
+            <span>备孕期</span>
+            <a href="#">更多>></a>
+          </div>
+          <div class="xx-cont">
+            <% mts = Catalog.articles("穿衣")[0..5] %>
+            <% mt = mts.first %>
+            <span><%= link_to_blank image_tag(mt.cover.url, width:90, height:65), mt %></span>
+            <div class="s-r">
+               <b><%= link_to_blank mt.title, mt %></b>
+            <p>
+              <%= truncate(mt.quote) %>
+              <%= link_to_blank "[详细]", mt %>
+            </p>
+            </div>           
+          </div>
+          <ul>
+            <% mts[1..5].each do |article| %>
+              <li><%= link(article) %><span><%= article.updated_at.to_date %></span></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class="right-xx">
+          <div class="xx-head">
+            <img src="/images/main/xx-img.png" />
+            <span>产后期</span>
+            <a href="#">更多>></a>
+          </div>
+          <div class="xx-cont">
+            <span><a href="#"><img src="/images/main/xx-p.png" width="90" height="65" /></a></span>
+            <div class="s-r">
+              <b><a href="#">2-3个月宝宝的行为发展大解读</a></b>
+              <p>身体上疏是人对自身真实健康情况自身劳动好了的量量<a href="#">[详细]</a></p>
+            </div>
+            
+          </div>
+          <ul>
+            <li><b>·</b><a href="#">上班族父母晚上怎么带宝宝</a><span>2013-06-03</span></li>
+            <li><b>·</b><a href="#">上班族父母晚上怎么带宝宝</a><span>2013-06-03</span></li>
+          </ul>
+        </div>
+        <div class="right-xx">
+          <div class="xx-head">
+            <img src="/images/main/xx-img.png" />
+            <span>怀孕期</span>
+            <a href="#">更多>></a>
+          </div>
+          <div class="xx-cont">
+            <span><a href="#"><img src="/images/main/xx-p.png" width="90" height="65" /></a></span>
+            <div class="s-r">
+              <b><a href="#">2-3个月宝宝的行为发展大解读</a></b>
+              <p>身体上疏是人对自身真实健康情况自身劳动好了的量量<a href="#">[详细]</a></p>
+            </div>
+            
+          </div>
+          <ul>
+            <li><b>·</b><a href="#">上班族父母晚上怎么带宝宝</a><span>2013-06-03</span></li>
+            <li><b>·</b><a href="#">上班族父母晚上怎么带宝宝</a><span>2013-06-03</span></li>
+          </ul>
+        </div>
+        <div class="right-xx">
+          <div class="xx-head">
+            <img src="/images/main/xx-img.png" />
+            <span>育儿期</span>
+            <a href="#">更多>></a>
+          </div>
+          <div class="xx-cont">
+            <span><a href="#"><img src="/images/main/xx-p.png" width="90" height="65" /></a></span>
+            <div class="s-r">
+              <b><a href="#">2-3个月宝宝的行为发展大解读</a></b>
+              <p>身体上疏是人对自身真实健康情况自身劳动好了的量量<a href="#">[详细]</a></p>
+            </div>
+            
+          </div>
+          <ul>
+            <li><b>·</b><a href="#">上班族父母晚上怎么带宝宝</a><span>2013-06-03</span></li>
+            <li><b>·</b><a href="#">上班族父母晚上怎么带宝宝</a><span>2013-06-03</span></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class="xian">
+</div>

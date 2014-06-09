@@ -1,0 +1,17 @@
+.bundle
+db/*.sqlite3
+log/*
+tmp/*
+nbproject/*
+config/database.yml
+public/system/*
+public/tmp/*
+public/cache/*
+public/uploads/*
+public/javascripts/mumjs.js
+public/stylesheets/mumcss.css
+*.swp
+vendor/cache
+.DS_Store
+db/schema.rb
+Gemfile.lock

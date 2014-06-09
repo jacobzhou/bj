@@ -1,0 +1,66 @@
+<div class="bnnte">
+  <%= link_to_blank image_tag(@gg.file.url, width:"995px", height:"115px"), @gg.link if @gg %>
+</div>
+<%= render "shared/bj_right" %>
+<div class="index_main_left">
+  <div class="left_top">
+    <div class="left_top_r">
+      <div class="right_line right_line_h"></div>
+      <div class="p">
+        <%= @c0.catalog.name if @c0.present? %>
+      </div>
+      <div class="title_all title_all_xnews"></div>
+      <div class="all_title_text_two">
+      </div>
+      <!-- 行业资讯列表-->
+      <div style="display: block;" class="xh_news" id="xhxw1">
+        <%= render "bj_list", :rs => @c0 %>
+      </div>
+      <!-- 领导讲话 -->
+    </div>
+    <!-- 焦点图 -->
+    <div class="index_focus" id="index_fpics">
+      <div id="index_fpics_bps" class="bps">
+        <div class="ps">
+           <% @gdt.each_with_index do |pic, index| %>
+            <%= link_to_blank image_tag(pic.file.url, :class => "dcorner"), pic.link, :id => "index_fpics_bp_#{index}", :class => "i bp" %>
+          <% end -%>
+        </div>
+        <div class="thumbs">
+          <a id="index_fpics_next" class="nr" href="javascript:void(0);"></a>
+          <div id="index_fpics_sps" class="sps">
+            <% @gdt.each_with_index do |pic, index| %>
+              <%= link_to_blank image_tag(pic.file.url, :width => "40", :height => "36"), pic.link, :title => pic.alt, :id => "index_fpics_sp_#{index}", :class => "i" %>
+            <% end -%>
+          </div>
+          <a id="index_fpics_prev" class="nl" href="javascript:void(0);"></a>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
+
+  </div>
+  <div class="left_bottom">
+    <div class="left_bottom_c">
+      <div class="zx">
+        <% [@c1,@c2,@c3,@c4].each_with_index do |articles, index| %>
+          <div class="left_bottom_c_all <%= 'mleft'.html_safe if index%2 == 1 %>">
+            <div class="right_line right_line_height1"></div>
+            <div class="order_gd">
+              <%= link_to "更多&gt;&gt;".html_safe, catalog_path(articles.first.catalog_id) if articles.present? %>
+            </div>
+            <div class="p">
+              <%= articles.first.catalog.name if articles.present? %>
+            </div>
+            <div class="title_all title_all_xnews"></div>
+            <div class="xh_news">
+              <%= render "bj_list", :rs => articles %>
+            </div>
+          </div>
+        <% end -%>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

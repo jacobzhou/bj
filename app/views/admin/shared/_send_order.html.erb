@@ -1,0 +1,24 @@
+<% if @send_order %>
+  <div class="alert alert-info">
+    <h5 class="alert-heading"><%= t 'models.send_order' %></h5><hr>
+    <h5 class="alert-heading">
+    <table class="info_table">
+      <tr>
+        <td>状态：</td>
+        <th><%= d(@record.status, "s_status") %></th>
+      </tr>
+      <tr>
+        <td>业务人员：</td>
+        <th><%= @send_order.sellers %></th>
+        <td>服务人员：</td>
+        <th><%= @send_order.aunts %></th>
+        <td>谈单时间</td>
+        <th><%= @send_order.interview_time %></th>
+      </tr>
+      <tr>
+        <td>备注：</td>
+        <th colspan="3" align="left"><%= @send_order.remark %></th>
+      </tr>
+    </table></h5>
+  </div>
+<% end -%>

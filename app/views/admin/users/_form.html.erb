@@ -1,0 +1,7 @@
+<%= simple_form_for [:admin, @user]   do |f| -%>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.association :roles, :as => :check_boxes %>
+  <%= f.association :extra_permissions, :as => :check_boxes %>
+  <%= render '/admin/shared/form_buttons', :f => f  %>
+<% end -%>

@@ -1,0 +1,150 @@
+.service .svinfo li b {
+  color: #047E8B;
+}
+
+.service .svinfo li {
+  margin-bottom: 10px;
+}
+
+.service .case-items dd {
+  padding: 0;
+}
+
+.service .svinfo li a {
+  color: #047E8B;
+}
+
+.carings td {
+  padding-bottom: 30px;
+  vertical-align: top;
+}
+
+.carings table {
+  margin-bottom: 50px;
+}
+
+.network .menu-scroll {
+  height: auto;
+}
+
+.map-tit {
+  margin-top: 0;
+}
+
+.service .info {
+  text-align: center;
+}
+
+.cbox-2 strong a {
+  text-decoration: underline;
+  color: #047E8B;
+}
+
+.blue {
+  color:#047E8B;
+}
+
+.work-items h4 {
+  color:#047E8B;
+}
+
+.staff-tit {
+ color:#047E8B;
+ font-size: 1.3em
+}
+
+.salary {
+  padding-bottom: 40px;
+}
+｝
+
+.staff-tit a, .staff-tit a:link, .staff-tit a:visited {
+  color:#047E8B;
+  margin-right: 40px;
+}
+
+.nav li {
+  padding-right: 8px;
+}
+
+.staff-item .staff-intro {
+  padding: 0px;
+}
+
+.gap-line {
+  text-indent: 0;
+  padding-bottom: 1em;
+}
+
+.teambg.main {
+  background-image: url("/img/demo/team_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 150px;
+  /*height:316px*/
+}
+
+.staff-list {
+  padding-bottom: 0px;
+}
+
+.mbox em a {
+  color: #047E8B;
+  /*text-decoration: underline;*/
+}
+
+.submenu2{position:absolute;left:-3px;top:25px;z-index:12;}
+.submenu2 li,.nav li .m .submenu li{height:30px;line-height:30px;overflow:hidden;border-bottom:1px solid #ddd; vertical-align:middle; background:#f00;}
+.submenu2 li a{display:block;text-align:center;height:30px;overflow:hidden;font-size:12px;}
+.submenu2 li a:hover{color:#238D98;text-decoration:none;}
+.submenu2 li.last{border-bottom:0;}
+.submenu2 li {background-color: #f3f3f3;}
+.submenu2.menu-wide .hd{background:url(../img/menu_hd_wide2.png) center 0 no-repeat;}
+.submenu2.menu-wide .ft{background:url(../img/menu_ft_wide2.png) center bottom no-repeat;}
+.submenu2.menu-wide ul{width:211px;background:url(../img/menu_c_wide2.png) 0 0 repeat-y;}
+.submenu2 {
+    margin-left: 220px;
+    margin-top: -46px;
+    z-index: 12;
+    display: none;
+}
+.submenu li a {
+    text-align: left;
+}
+
+.services_box {
+  text-align: right;
+  font-style: italic;
+  font-size: 1.2em;
+  padding: 1.5em;
+  color: #238D98;
+  border-top: 1px solid #eee;
+}
+
+.services_box a {
+  color: #238D98;
+  text-decoration: underline;
+}
+
+.service .main {
+  padding-bottom: 50px;
+}
+
+.nav {
+  left: 155px;
+}
+
+.history {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.history .intro_video_link, .history .intro_video_link a {
+  text-align: right;
+  color: #238D98;
+}
+
+.sharethis {
+  float:right;
+  margin-top:5px;
+}

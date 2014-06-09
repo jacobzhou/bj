@@ -1,0 +1,12 @@
+<%= simple_form_for [:admin, @picture] ,:html => {:multipart => true}  do |f| -%>
+  <%= f.input :file do %>
+  	<%= image_tag(@picture.file.url(:thumb)) << "<br/>".html_safe if @picture.file? %>
+  	<%= f.file_field :file  %>
+  <% end -%>
+  <%= f.input :alt %>
+  <%= f.input :link %>
+  <%= f.input :place, :collection => Picture::PLACES %>
+  <%= f.input :position %>
+  <%= render '/admin/shared/form_buttons', :f => f  %>
+<% end -%>
+

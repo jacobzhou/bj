@@ -1,0 +1,48 @@
+<div class="topbar" style="position: fixed; top: 0px; left: 0px; z-index: 3000; ">
+   <div class="inner tc">
+      <span class="arrow"></span>
+      <span class="top_contact">专业私人营养师定制服务  400-009-8566</span>
+      <ul class="topr">
+         <!-- <li style="padding-right:0;margin-top:4px;margin-right:4px"><a href="http://www.rahcb.com/pages/weixin" target="_blank"><img src="/images/rah/icon_weixin.png" alt=""></a></li>
+         <li style="padding-right:0;"><a href="http://e.weibo.com/rightathome" target="_blank"><i class="ico-weibo"></i></a></li>
+         <li style="padding-right:0;"><a href="http://wpa.qq.com/msgrd?V=1&Uin=1395569330&Site=%C8%CA%90%DB%C8A&Menu=yes/" target="_blank"><i class="ico-qq"></i></a></li> -->
+      </ul>
+   </div>
+</div>
+<div class="header">
+  <div class="inner">
+    <h1 class="logo"></h1>
+    <span class="toptxt"></span>
+    <div class="topsearch">
+      <div class="lg">
+        <a href="http://www.rahcb.com/pages/team4">&nbsp;</a>
+        &nbsp;&nbsp;
+        <a href="http://clients.cajcare.com/" target="_blank">  </a>
+      </div>
+      <form action="http://www.rahcb.com/news">
+        <%= select_tag "people", "<option>个人服务</option><option>企业服务</option>".html_safe, :class => "search-ipt" %>
+        <input class="search-btn ml3" type="submit" value="预约">
+      </form>
+    </div>
+    <ul class="nav">
+      <!-- <li><a class="m" href="/">首页</a></li> -->
+      <% Catalog.top_menus.each do |catalog| %>
+        <li>
+          <%= link_to catalog.name, catalog.article, :class => "m" %>
+          <% if catalog.articles.present? %>
+            <div class="submenu">
+              <span class="hd"></span>
+              <ul>
+                <% catalog.articles.each do |article| %>
+                  <li><%= link_to article.title, article %></li>
+                <% end -%>
+              </ul>
+              <span class="ft"></span>
+            </div>
+          <% end -%>
+        </li>
+      <% end -%>
+    </ul>
+  </div>
+</div>
+<!-- header end -->

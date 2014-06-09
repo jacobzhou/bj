@@ -1,0 +1,67 @@
+<%= render "shared/bj_right" %>
+<div class="fl">
+  <div class="xhjs">
+    <div class="zcfg_title">
+      <div class="dh">
+        当前位置：
+        <a href="/">协会首页 </a> &gt;
+        <a href=""><%= @catalog.name %></a>
+      </div>
+    </div>
+    <div class="zcfg_xhdt zxzx_gjnrj_title">
+      <div class="zxzx_gjnrj_gjnrc">
+        <%= @catalog.name  %>
+      </div>
+      <div class="mune_gd">
+      </div>
+      <div class="zxzx_gjnrj_ct1">
+        <div class="all_float_left kyzx_left_bottom_left">
+          <% @articles.each do |article| %>
+            <div class="h">
+              <%= link_to article.title, article %>
+            </div>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+    <%= paginate @articles %>
+  </div>
+</div>
+        
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edg">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="keywords" content="中国职协 职业教育 职业培训">
+<meta http-equiv="description" content="中国职工教育和职业培训协会（简称中国职协），是具有法人资格的全国性社团，由全国各级各类企业、事业及行政单位从事职工教育、职业培训、职业技能鉴定工作的部门或个人自愿结合组成，是非营利性社会团体，是联合各部门、各行业、各地区在确定的工作领域配合政府进行具体工作的全国性专业法人团体。">
+<link rel="shortcut icon" href="http://www.zhongguozhixie.com.cn:80/favicon.ico">
+
+<script type="text/javascript">var context_path = "";var url_suffix = "http://www.zhongguozhixie.com.cn:80/"; var resource_path = "http://www.zhongguozhixie.com.cn:80/resource/you/"; var loged_user_id=""; var loged_user_name="未登录"; var loged_user_type="";var upload_path_suffix = "http://www.zhongguozhixie.com.cn";var jsessionid="94CC90EC7CDC16FA1E7BF2AD2D9BCF48";</script>
+<script type="text/javascript" src="http://www.zhongguozhixie.com.cn:80/js/jquery.js"></script>
+<script type="text/javascript" src="http://www.zhongguozhixie.com.cn:80/js/webbase.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.zhongguozhixie.com.cn:80/resource/css/focus.css">
+
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/cnvettools.js"></script>
+    <script type="text/javascript" src="../js/webbase.js"></script>
+  
+  
+  
+  
+  
+
+
+      </div>

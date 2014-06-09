@@ -1,0 +1,23 @@
+<div id="fork" class="hide">
+	<%#= @forks.find_all{|f| f.lesson_id == 18} %>
+	<% if current_user %>
+		<%= simple_form_for(@fork) do |f| %>
+			<%# if current_user.info %>
+<!-- 				<p>尊敬的<%#= current_user.name %>：</p>
+				<p>您预约的课程是： <span id="lesson_name" class="orange"></span></p>
+				<p>您的联系方式是： <%#= current_user.phone %></p> -->
+			<%# else %>
+				<p>您好：</p>
+				<p>请您留下您的联系方式，方便我们提前通知您：</p>
+				<p><span class="required-mark">*</span>称呼：<%= text_field_tag 'info[name]',current_user.info.try(:name) %></p>
+				<p><span class="required-mark">*</span>手机：<%= text_field_tag 'info[phone]',current_user.info.try(:phone) %></p>
+				<p>您预约的课程是： <span id="lesson_name" class="orange"></span></p>
+			<%# end %>		
+			<%= f.input :lesson_id, :as => :hidden %>
+			<%= f.input :note, :input_html => {:rows => 10 }%>
+		<% end %>
+	<% else %>
+		<p>请您先<%= link_to "登录", sign_in_path %></p>
+	<% end %>
+	<p>感谢您的预约，好孕妈妈会为您提供最好的孕期服务让您和您的孩子更加健康,快乐。</p>
+</div>

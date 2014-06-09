@@ -1,0 +1,214 @@
+zh-CN:
+  activerecord:
+    errors:
+      template: # ~ 2.3.5 backward compatible
+        header:
+          one: "有 1 个错误发生导致「%{model}」无法被保存。"
+          other: "有 %{count} 个错误发生导致「%{model}」无法被保存。"
+        body: "如下字段出现错误："
+      messages:
+        inclusion: "不包含于列表中"
+        exclusion: "是保留关键字"
+        invalid: "无效，请重写"
+        confirmation: "与确认密码不匹配"
+        accepted: "必须是可被接受的"
+        empty: "不能留空"
+        blank: "不能为空，请填写"
+        too_long: "过长（最长为 %{count} 个字符）"
+        too_short: "过短（最短为 %{count} 个字符）"
+        wrong_length: "长度非法（必须为 %{count} 个字符）"
+        taken: "已经被使用"
+        not_a_number: "不是数字"
+        not_an_integer: "必须是整数"
+        greater_than: "必须大于 %{count}"
+        greater_than_or_equal_to: "必须大于或等于 %{count}"
+        equal_to: "必须等于 %{count}"
+        less_than: "必须小于 %{count}"
+        less_than_or_equal_to: "必须小于或等于 %{count}"
+        odd: "必须为单数"
+        even: "必须为双数"
+        record_invalid: "校验失败: %{errors}"
+  simple_form:
+    "yes": '是'
+    "no": '否'
+    required:
+      text: '必填'
+      mark: '*'
+      html: "<span class='required-mark'>*</span>"
+    error_notification:
+      default_message: "出现了一些错误，请仔细检查："
+    labels:
+      # common fields
+      defaults:
+        cat: 栏目文章
+        sellers: 业务人员
+        aunts: 服务人员
+        remark: 备注
+        real_name: 姓名
+        city_id: 现居地
+        baby_num: 照顾宝宝数（位）
+        birthday: 生日
+        home_id: 籍贯
+        edu_lv: 学历
+        exp_year: 从业经验（年）
+        yz: '孕f周 [4-40周]'
+        at_home: 是否需要住家
+        service_time: 不住家期望服务时间
+        area: 地区
+        baby_age: '宝宝月龄（月）'
+        baby_sex: 宝宝性别
+        baby_num: '宝宝数量（位）'
+        record_ys: '面试人员'
+        need_clean: 兼做家务保洁
+        service_type: 选择服务类别：
+        due_on: 预产期
+        period: 希望服务几个月
+        lv: 期望月嫂级别
+        people_number: 人数
+        desc: 描述
+        name: 名称
+        parent_id: 父节点
+        title: 标题
+        content: 内容
+        cover: 封面
+        catalog_id: 栏目
+        teacher: 老师
+        article_id: 文章
+        start_at: 开始时间
+        end_at: 结束时间
+        position: 排序权重
+        top: 置顶
+        file: 图片
+        alt: 图片说明
+        link: 链接或脚本
+        place: 摆放位置
+        subject_class: 对象
+        action: 授权方式
+        published: 发布
+        email: 邮箱
+        roles: 角色
+        extra_permissions: 特权
+        permissions: 权限
+        xsize: 自定义封面大小
+        email: 邮箱
+        current_password: 当前密码
+        password: 密码
+        password_confirmation: 确认密码
+        remember_me: 自动登录
+        quote: 简介
+        note: 说明
+        recommend: 推荐
+        height: 身高（米）
+        weight: 体重（斤）
+        pth: 普通话水平
+        active: 激活
+        ctype: 类型
+        template: 文章模板
+        tags: 标签
+        tag: 标签
+        blood_type: 血型
+        status: 状态
+        jb: 服务级别
+        tag_list: 标签
+        stay_home: 是否住家
+        dt: 推荐到首页动态
+        dt_title: 重置动态标题
+        job: 职业
+        course_catalog: 分类
+        address: 详细地址
+        seo_title: SEO标题
+        seo_keywords: SEO关键字
+        seo_desc: SEO描述
+        user_name: 您的姓名
+        sex: 性别
+        skills: 掌握技能
+        mobile: 手机号
+        record_at: 咨询时间
+        customer_name: 客户姓名
+        family_info: "客户家庭情况"
+        salarys: "预期工资（￥）"
+        serive_money: "服务费（￥）"
+        what: "要什么保姆"
+        qq: "QQ/微信/邮箱"
+        need: "对阿姨的要求"
+        interview_time: "谈单时间"
+        work_time: "工作时间（休）"
+        return_visit: "回访记录"
+        lx_id: 类型
+        lx: 类型
+      ht:
+        no: 合同编号
+        sign_at: 签单时间
+        price: 订单金额（RMB）
+        fwf: 服务费（RMB）
+        salary: 人员工资（RMB）
+      yy_srt:
+        needs: 你的服务需求
+        people: 需要服务的人数
+        month: 希望服务几个月
+        special: 你的特殊调理需求
+        other: 其他亚健康调理
+      yy_yqt: 
+        month: 希望服务几个月
+      yy_byt: 
+        month: 希望服务几个月
+        pmonth: '期望怀孕时间 [月后]'
+        people: '日常就餐人数 [位]'
+      lesson:
+        teacher_id: 专家
+        course_id: 课程介绍
+      code:
+        name: 代号
+      fork:
+        note: 留言
+      teacher:
+        name: 姓名
+        quote: 简历
+        content: 详细介绍
+        cover: 头像
+        top: 展示到首页
+      user_info:
+        name: 姓名
+        phone: 手机
+      skill:
+        lx: 类型
+      y:
+        desc: 介绍及特长
+      record:
+        ys: 面试人员
+    hints:
+      defaults:
+        position: 小数型，越大越靠前
+        action: 'manage(管理), read(读取)'
+        extra_permissions: 除角色包含外的权限
+        cover: "默认生成的格式：medium => '120x90#', :small => '73x73#'"
+        xsize: 格式：长x宽
+        quote: '摘要，教师专长，产后修复标签（空格隔开）'
+        recommend: 栏目文章
+        tag: 相同标签的文章按标签页方式显示在同一页面
+        lx_id: 分别对应首页滚动图及各栏目
+        tags: '用空格隔开 如: 孕期抽筋 产兆 月子餐'
+        seo_title: "{name}将替换成栏目名称，如：{name},好孕妈妈-胎教专家。下同。"
+      teacher:
+        quote: ''
+      lesson:
+      picture:
+        link: '如：/articles/28; javascript:alert(1)'
+        alt: '如：首页LOGO'
+
+  helpers:
+    submit:
+      create: 创建
+      update: 更新
+      submit: 保存
+      session:
+        submit: 登录
+      user:
+        create: 注册
+    select:
+      prompt: 请选择
+  options:
+    pictrues:
+      place:
+        logo: 首页LOGO
+        slide: 首页幻灯片

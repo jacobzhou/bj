@@ -1,0 +1,48 @@
+<%= stylesheets "site" %>
+<div class="sign_content">
+	<%= simple_form_for resource, :as => resource_name, :url => sign_up_path do |f| %>  
+    <table width="100%">
+      <tr>
+        <td align="center" valign="middle" >
+          <img src="/images/rah/img.png"/>
+        </td><form action="/" method="post">  
+        <td> 
+          <table width="100%">
+            <tr style="height: 50px;">
+              <td></td>
+              <td>用户登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr style="height: 50px;">
+              <td style="width: 20%;" align="right"><span class="required-mark">*</span> 用户名&nbsp;&nbsp;&nbsp;</td>
+              <td>  
+              <%= f.input :email, :required => true, :label => false %>
+              <%#= f.input_field "email", :class => "text", :style => "width:250px;height:25px;" %>
+              </td>
+            </tr>
+            <tr style="height: 50px;">
+              <td style="width: 20%;" align="right"><span class="required-mark">*</span> 密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;&nbsp;</td>
+              <td>
+                <%= f.input "password", :required => true, :label => false %>
+              </td>
+            </tr>
+            <tr style="height: 50px;">
+              <td style="width: 20%;" align="right"><span class="required-mark">*</span> 确认密码&nbsp;&nbsp;&nbsp;</td>
+              <td>
+                <%= f.input "password_confirmation", :required => true, :label => false %>
+              </td>
+            </tr>
+            <tr style="height: 50px;">
+              <td></td>
+              <td>
+                <%= f.button :submit, '注  册', :class=>"loginbutton" %>
+                &nbsp;&nbsp;
+                <%= link_to "登  陆", sign_in_path, :class => "registerbutton" %>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  <% end -%>
+</div>
+

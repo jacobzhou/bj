@@ -1,0 +1,65 @@
+.icon_add {
+  padding-left: 27px; 
+  /*cursor:pointer;*/
+  background: url(/images/icons.png) no-repeat -170px -4px;
+}  
+
+.node, .board {
+padding-left: 25px;
+background: url(/images/admin/bg_repno.gif) no-repeat -240px -550px;}
+
+
+.level-indent3 { margin-left: 25px; }
+.level-indent4 { margin-left: 50px; }
+.level-indent5 { margin-left: 75px; }
+.level-indent6 { margin-left: 100px; }
+
+.search_spans span{
+  margin-right: 12px;
+}
+.search_spans span input[type="checkbox"], input[type="radio"] {
+    float: none;
+    margin-top: 8px
+}
+
+.addchildboard {
+padding-left: 17px;
+line-height: 20px;
+background: url(/images/admin/bg_repno.gif) no-repeat 0 2px;
+color: #FFF;
+}
+
+.editchildboard {
+padding-left: 17px;
+line-height: 20px;
+background: url(/images/admin/bg_repno.gif) no-repeat -286px -150px;
+color: #FFF;
+}
+
+.removechildboard {
+padding-left: 17px;
+line-height: 20px;
+background: url(/images/admin/bg_repno.gif) no-repeat 0 -285px;
+color: #FFF;
+}
+
+
+
+.purr{
+	font-size: 200px;
+}
+
+.edit_name td{
+	color: blue;
+}
+.edit_name .best_in_place{
+	cursor: pointer;
+}
+
+.btn { height: auto; }
+
+.add_nested_fields {clear: both;}
+.ui-widget-header a { font-size: 12px; }
+.form-container-md{max-width: 700px; margin: 0 auto;}
+.info_table{font-weight:normal;}
+.info_table th{padding-right: 12px;}

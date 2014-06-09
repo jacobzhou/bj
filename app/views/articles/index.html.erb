@@ -1,0 +1,29 @@
+<div class="wraper">
+  <!-- main -->
+  <div class="main">
+    <div class="curpath">
+      <a href="/">首页</a><i>&gt;</i><%= @catalog.name %>
+    </div>
+    <h2 class="title"><%= @catalog.name %></h2>
+    <ul class="newslist">
+      <% @articles.each do |article| %>
+        <li>
+          <h4>
+            <span><%= article.updated_at.to_date.to_s %></span>
+            <%= link_to article.title, article %>
+          </h4>
+        </li>           
+      <% end -%>
+    </ul>
+    <%= paginate @articles %>
+  </div>
+  <!-- end main -->
+  <!-- sidebar -->
+  <%= render "/shared/side" %>
+  <!-- end sidebar -->
+</div>
+
+
+
+
+

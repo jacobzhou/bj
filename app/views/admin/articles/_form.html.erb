@@ -1,0 +1,35 @@
+<%= include_rich_text_editor -%>
+<%= javascripts "nested_form" %>
+<%= simple_nested_form_for [:admin, @article] ,:html => {:multipart => true}  do |f| -%>
+  <%= f.input :title, :input_html => {:class => "w500"} %>
+  <%= f.input :catalog_id do %>
+   	<%= f.hidden_field :catalog_id  %>
+		<%= dynamic_selects Catalog, @article.catalog_id, :article_catalog_id %>
+  <% end -%>
+  <%= f.input :attachments, :label => "封面" do %>
+    <%=f.fields_for :attachments, @article.attachments do |attachment_form| %> 
+        <% if attachment_form.object.file? %>
+          <div class="attch"><%= image_tag(attachment_form.object.file.url(:mini)) %></div>
+        <% else %>
+          <%= attachment_form.file_field :file %>
+        <% end -%>
+        <%= attachment_form.hidden_field :lx %>
+        <%= attachment_form.link_to_remove "删除" %>
+      <% end -%>
+    <%= f.link_to_add "添加图片", :attachments, :class => "btn" %>
+  <% end -%>
+  <%= f.input :tag %>
+  <%= f.input :quote, :input_html => {:rows => 5, :style => "width:600px"} %>
+  <%= f.input :content, :input_html => {:class => "rich-text-editor"} %>
+  <%= f.input :position %>
+  <%= f.input :cat %>
+  <%= f.input :published %>
+  <%= render '/admin/shared/form_buttons', :f => f  %>
+<% end -%>
+<script type="text/javascript">
+  $(function(){
+    $('form').submit(function(){
+      $(".fields").find("input[id$='lx']").val("头像");
+    });
+  });
+</script>

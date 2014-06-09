@@ -1,0 +1,33 @@
+<div class="wraper">
+  <!-- main -->
+  <div class="main">
+    <div class="curpath">
+      <a href="/">首页</a><i>&gt;</i>
+      <a href="http://www.rahcb.com/services"><%= @article.catalog.name %></a><i>&gt;</i><%= @article.title %>
+    </div>
+    <% if @tag_articles.present? %>
+      <ul class="team-tabs">
+        <% @tag_articles.each do |article| %>
+          <li <%= 'class="current"'.html_safe if article == @article %> ><%= link_to article.title, article %></li>
+        <% end -%>
+      </ul>
+    <% end -%>
+
+    <div class="news-detail">
+      <% unless @tag_articles.present? %>
+        <h2 class="big-tit"><%= @article.title %></h2>
+        <div class="info">
+          发布时间：2014-02-26 00:00
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信息来源：
+         </div>
+      <% end -%>
+      <div class="news-content">
+        <%= @article.content.html_safe %>
+      </div>
+    </div>
+  </div>
+  <!-- end main -->
+  <!-- sidebar -->
+  <%= render "/shared/side" %>
+  <!-- end sidebar -->
+</div>

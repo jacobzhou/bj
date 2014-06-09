@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+.index_focus{ border: 1px solid #d0d0d0;float:left;width:462px; height: 257px; padding: 4px; margin-bottom: 30px; }
+.index_focus .bps{ height: 257px; position: relative; z-index: 1; }
+.index_focus .bps .ps{ width: 462px; height: 257px; float: left; position: relative; z-index: 2; overflow: hidden; }
+.index_focus .bps .ps .bp{ width: 462px; height: 257px; display: none; position: absolute; left: 0px; top: 0px; z-index: 2; }
+.index_focus .bps .ps img{ width: 462px; height: 257px; }
+.index_focus .bps .thumbs{ width: 462px; height: 38px; background: url(/images/bj/index_focus_title_bg.png) repeat; z-index: 3; position: absolute; left: 0px; bottom: 0px; }
+.index_focus .bps .thumbs .t{ width: 200px; height:38px; float: left; margin-left: 15px; overflow: hidden; color: #ffffff; letter-spacing: 1px; text-align: left; font: normal 14px/38px "microsoft YaHei"; }
+.index_focus .bps .thumbs .nl{ width: 8px; height: 15px; margin: 11px 10px; display: block; background: url(/images/bj/arrow_left.png) no-repeat; float: right; text-align: right; }
+.index_focus .bps .thumbs .nr{ width: 8px; height: 15px; margin: 11px 10px; display: block; background: url(/images/bj/arrow_right.png) no-repeat; float: right; text-align: right; }
+.index_focus .bps .thumbs .sps{ height: 36px; overflow: hidden; margin-top: 1px; float: right; text-align: left; }
+.index_focus .bps .thumbs .sps .i{ width: 40px; height: 36px; margin: 0px 2px; float: left; }
+.index_focus .bps .thumbs .sps .i img{ width: 40px; height: 36px; }
+.index_focus .bps .thumbs .sps .active{ border: 3px solid #f74819; width: 34px; height: 30px; }
+.index_focus .bps .thumbs .sps .active img{ width: 34px; height: 30px; }
+
+******下载页面*******
+
+.downloadkuang{ border:1px solid #d7d7d7; margin:0 auto; padding-bottom:20px;}
+.downloadkuangp{ height:32px; margin-top:20px; margin-bottom:20px;}
+.downloadkuangp1{color:#c11720; font-size:14px; font-weight:bold; margin-top:20px;}
+.downloadkuangp2{font-size:14px; margin-top:10px;margin-bottom:10px;}
+.downloadkuangp2 a{text-decoration:none; font-weight:bold;}
+.downloadkuangp2 a:hover{color:#c11720; text-decoration:none;}
+.downloadkuangp3{color:#666666; font-size:12px;}
+.downloadmain{width: 582px; float: right; border:1px solid #d7d7d7; padding:10px 20px 10px 20px;}

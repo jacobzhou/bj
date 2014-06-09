@@ -1,0 +1,14 @@
+<div class="form-container-md">
+  <%= simple_form_for [:admin, @catalog] ,:html => {:class => ""}  do |f| -%>
+    <%#= f.input :parent_id do %>
+     <%#= f.hidden_field :parent_id  %>
+     <%#= dynamic_selects Catalog, @catalog.parent_id, :catalog_parent_id %>
+    <%# end -%>
+    <%= f.input :name %>
+    <%= f.input :desc, :input_html => {:class => "h100"} %>
+    <%= f.input :lx_id, :collection => Setting.catalog_lxs, :include_blank => "无" %>
+    <%= f.input :position %>
+    <%= f.input :status, :collection => Setting.show  %>
+    <%= render '/admin/shared/form_buttons', :f => f  %>
+  <% end -%>
+</div>

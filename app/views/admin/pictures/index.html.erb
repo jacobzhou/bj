@@ -1,0 +1,45 @@
+<section id="tables">
+  <div class="page-header">
+    <%= link_to "添加图片", new_admin_picture_url, :class => "btn btn-primary" %>
+  </div>
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>位置</th>
+        <th>缩略图</th>
+        <th>排序权重</th>
+        <th>图片说明</th>
+        <th>链接或脚本</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+    <%  current_place = "" 
+        @pictures.each_with_index do |picture, index|     
+      %>
+      <tr>
+        <td><%= index_no(index, @pictures.size) %></td>
+        <td><%= picture.place %>
+          <% if current_place != picture.place %>
+            &nbsp;<span class="badge badge-important">TOP</span>
+          <% 
+          current_place = picture.place
+          end -%>
+        </td>
+        <td><%= image_tag picture.file.url(:thumb) if picture.file? %>
+          
+        </td>
+        <td><%= picture.position %></td>
+        <td><%= picture.alt %></td>
+        <td><%= picture.link %></td>
+        <td>
+           <%= eda_links(picture) %>
+        </td>
+      </tr>
+    <% end -%>
+    </tbody>
+  </table>
+</div>
+<%= paginate @pictures %>
+</section>

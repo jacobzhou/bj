@@ -1,0 +1,30 @@
+<%= javascripts 'jquery.purr','best_in_place' %>
+<section id="tables">
+	<div class="alert alert-block">
+    <h5 class="alert-heading">温馨提示：</h5>
+    <ol>
+    	<li>点击栏目名称可直接修改</li>
+    </ol>
+  </div>
+  <div class="page-header">
+    <%= link_to "添加栏目", new_admin_catalog_path, :class => "btn btn-primary" %>
+  </div>
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th width=30%>栏目结构</th>
+        <th>类型</th>
+        <th width='50px'>文章数</th>
+        <th width='60px'>排序权重</th>
+        <th>描述</th>
+        <!-- <th>模板</th> -->
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+    <%= render :partial => 'catalogs', :object => @catalogs %>
+    </tbody>
+  </table>
+</div>
+<%#= paginate @catalogs %>
+</section>

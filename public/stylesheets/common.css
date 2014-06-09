@@ -1,0 +1,236 @@
+
+.mt1 {
+  margin-top: 1px; }
+
+.mt2 {
+  margin-top: 2px; }
+
+.mt3 {
+  margin-top: 3px; }
+
+.mt4 {
+  margin-top: 4px; }
+
+.mt5 {
+  margin-top: 5px; }
+
+.mt6 {
+  margin-top: 6px; }
+
+.mt7 {
+  margin-top: 7px; }
+
+.mt8 {
+  margin-top: 8px; }
+
+.mt9 {
+  margin-top: 9px; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mt11 {
+  margin-top: 11px; }
+
+.mt12 {
+  margin-top: 12px; }
+
+.mt13 {
+  margin-top: 13px; }
+
+.mt14 {
+  margin-top: 14px; }
+
+.mt15 {
+  margin-top: 15px; }
+
+.mt16 {
+  margin-top: 16px; }
+
+.mt17 {
+  margin-top: 17px; }
+
+.mt18 {
+  margin-top: 18px; }
+
+.mt19 {
+  margin-top: 19px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mt21 {
+  margin-top: 21px; }
+
+.mt22 {
+  margin-top: 22px; }
+
+.mt23 {
+  margin-top: 23px; }
+
+.mt24 {
+  margin-top: 24px; }
+
+.mt25 {
+  margin-top: 25px; }
+
+.mt26 {
+  margin-top: 26px; }
+
+.mt27 {
+  margin-top: 27px; }
+
+.mt28 {
+  margin-top: 28px; }
+
+.mt29 {
+  margin-top: 29px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mt31 {
+  margin-top: 31px; }
+
+.mt32 {
+  margin-top: 32px; }
+
+.mt33 {
+  margin-top: 33px; }
+
+.mt34 {
+  margin-top: 34px; }
+
+.mt35 {
+  margin-top: 35px; }
+
+.mt36 {
+  margin-top: 36px; }
+
+.mt37 {
+  margin-top: 37px; }
+
+.mt38 {
+  margin-top: 38px; }
+
+.mt39 {
+  margin-top: 39px; }
+
+.mt40 {
+  margin-top: 40px; }
+
+.mt41 {
+  margin-top: 41px; }
+
+.mt42 {
+  margin-top: 42px; }
+
+.mt43 {
+  margin-top: 43px; }
+
+.mt44 {
+  margin-top: 44px; }
+
+.mt45 {
+  margin-top: 45px; }
+
+.mt46 {
+  margin-top: 46px; }
+
+.mt47 {
+  margin-top: 47px; }
+
+.mt48 {
+  margin-top: 48px; }
+
+.mt49 {
+  margin-top: 49px; }
+
+.ml30 {
+  margin-left: 30px;
+}
+.ml3 {
+  margin-left: 3px;
+}
+
+.w100{width: 100px;}
+.w120{width: 120px;}
+.w140{width: 140px;}
+.w150{width: 150px;}
+.w200{ width: 200px; }
+.w315{ width: 315px; }
+.w340{width: 340px;}
+.w500{width: 500px;}
+.w700{width: 700px;}
+.w1000{width: 1000px;}
+
+.h50{ height: 50px; }
+.h100{ height: 100px; } 
+
+.mw200{ min-width: 200px;}
+
+.center {
+  clear: both;
+  margin: 0 auto;
+}
+.b {
+  font-weight: bold;
+}
+.tr {
+  text-align: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.fl{
+  float: left;
+}
+
+.z100{
+  z-index: 100;
+}
+.tc {
+  text-align: center
+}
+
+.required-mark {
+  color: red; 
+}
+
+.pagination {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+.red {
+  color: red;
+}
+
+.orange {
+  color: orange;
+}
+
+.f13 {
+  font-size: 13px;
+}
+.small_textarea { height: 70px;width: 300px; }
+
+.btn {
+  height: 30px;
+  padding: 3px;
+}
+.help-inline {
+  color: rgb(223, 30, 30);
+  margin-left: 5px;
+}
+.fields {
+  max-height: 70px;
+  /*margin-top: -8px;*/
+  clear: both;
+  max-width: 150px;
+}

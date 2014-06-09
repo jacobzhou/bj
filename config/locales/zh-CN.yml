@@ -1,0 +1,58 @@
+zh-CN:
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M:%S"
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b%d日"
+      long: "%Y年%b%d日"
+    day_names: [星期日, 星期一, 星期二, 星期三, 星期四, 星期五, 星期六]
+    abbr_day_names: [日, 一, 二, 三, 四, 五, 六]
+    month_names: [~, 一月, 二月, 三月, 四月, 五月, 六月, 七月, 八月, 九月, 十月, 十一月, 十二月]
+    abbr_month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+    order:
+      - :year
+      - :month
+      - :day
+  paperclip:
+    image:
+      required: 请选择文件
+      oversize: 请上传小于1M的图片
+      type_error: 不支持的图片格式
+  views:
+    pagination:
+      first: 首页
+      previous: 上一页
+      next: 下一页
+      last: 末页
+      truncate: "..."
+  breadcrumb:
+    defaults:
+      edit: 修改
+      new: 添加
+      show: 查看
+      contract: 签合同
+  models:
+    ht: 合同
+    seller: 业务人员
+    send_order: 派单
+    user: 用户  
+    permission: 权限
+    role: 角色
+    picture: 图片
+    course: 课程介绍
+    article: 文章
+    catalog: 目录
+    code: 代码片段
+    lesson: 课程
+    teacher: 专家
+    fork: 预约
+    course_catalog: 课程分类
+    yy_user: 孕期服务预约
+    y: 月嫂
+    skill: 掌握技能
+    record: 客户咨询记录表
+  unauthorized:
+    manage:
+      all: "你没有权限!"

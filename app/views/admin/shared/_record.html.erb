@@ -1,0 +1,19 @@
+<% if @record %>
+  <div class="alert alert-info">
+    <h5 class="alert-heading"><%= t 'models.record' %> - <%= @record.no %></h5><hr>
+    <h5 class="alert-heading">
+    <table class="info_table">
+      <tr>
+        <td>状态：</td>
+        <th><%= d(@record.status, "r_status") %></th>
+      </tr>
+      <tr>
+        <td>客户姓名：</td>
+        <th><%= @record.customer_name %></th>
+        <td>手机号：</td>
+        <th><%= @record.mobile %></th>
+      </tr>
+    </table></h5>
+    <p><%= "备注：#{@record.desc}" if @record.desc.present? %></p>
+  </div>
+<% end -%>

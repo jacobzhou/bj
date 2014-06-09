@@ -1,0 +1,100 @@
+<div class="layout-1">
+  <!-- 大图轮播 -->
+  <div class="focuspic">
+    <ul class="slides">
+      <% @pics.each do |article| %>
+        <li>
+          <%= link_to_blank image_tag(article.cover.url, width:"760", height:"480"), article %>
+        </li>
+      <% end -%>
+    </ul>
+    <ul class="trigger">
+      <% @pics.each do |article| %>
+        <li class="">
+          <%= link_to_blank image_tag(article.cover.url, width:"96", height:"60"), article %>
+          <p><%= article.title %></p>
+        </li>
+      <% end -%>
+      <li class=""><!-- 留空 --></li>
+      <li class=""><!-- 留空 --></li>
+    </ul>
+   </div>
+</div>
+
+
+<div class="layout-2">
+  <!-- 健康新理念 -->
+  <div class="index-article">
+    <h2 class="title">
+      <%= link_to @middle_catalog.name, @middle_catalog.article %>
+    </h2>
+    <ul>
+      <li>
+        <h3><%= link_to @middle_articles[0].title, @middle_articles[0] %>
+        </h3>
+        <%= image_tag @middle_articles[0].cover.url, :width => "236px", :height => "154px" %>
+         <p><%= @middle_articles[0].quote %><b class="learnmore"><%= link_to "......", @middle_articles[0] %></b></p>
+      </li>
+      <li>
+         <h3><%= link_to @middle_articles[1].title, @middle_articles[1] %></h3>
+         <p><%= @middle_articles[1].quote %><b class="learnmore"><%= link_to "......", @middle_articles[1] %></b></p>
+      </li>
+    </ul>
+  </div>
+  <!-- 资讯与帮助 -->
+  <div class="services">
+     <h2 class="title"><%= link_to @middle_articles[2].title, @middle_articles[2] %></h2>
+     <div class="cont">
+        <%= @middle_articles[2].content.html_safe %>
+     </div>
+  </div>
+</div>
+
+
+<div class="layout-3">
+  <!-- 最新动态 -->
+  <div class="index-news">
+    <h2 class="title">
+      <%= link_to @foot_left_catalog.name, @foot_left_catalog.article %>
+    </h2>
+    <ul>
+      <% @foot_left_articles.each do |article| %>
+        <li><%= link_to article.title, article %></li>
+      <% end -%>
+    </ul>
+  </div>
+  <div class="mbox">
+    <h2 class="title">
+      <%= link_to @foot_middle_catalog.name, @foot_middle_catalog.article %>
+    </h2>
+    <ul>
+      <% @foot_middle_articles.each do |article| %>
+        <li>
+          <em><%= link_to_blank article.title, article -%>：</em>
+          <%= article.quote -%>
+          <b class="learnmore"><%= link_to_blank "......", article %></b>
+        </li>
+      <% end -%>
+    </ul>
+  </div>
+  <!-- 仁愛華推荐 -->
+  <div class="ibox recomend">
+    <h2 class="title">
+      <%= link_to @foot_right_catalog.name, @foot_right_catalog.article %>
+    </h2>
+    <% @foot_right_articles.each do |article| %>
+      <dl>
+        <dt>
+          <%= link_to_blank image_tag(article.cover.url, :width => "110px", :height => "110px"), article %>
+        </dt>
+        <dd>
+          <h4>
+            <%= link_to_blank "<b>#{article.title}</b>".html_safe, article %>
+          </h4>
+          <p><%= article.quote %></p>
+        </dd>
+      </dl>
+    <% end -%>
+  </div>
+</div> 
+

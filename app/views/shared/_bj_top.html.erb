@@ -1,0 +1,51 @@
+<div id="top">
+  <div class="lo">
+    <div class="main">
+      <div class="rbar">
+        <!-- <a class="atop" href="http://www.zhongguozhixie.com.cn/#">在线帮助</a> -->
+      </div>
+      <div class="lbar">
+     <!--    <a class="atop" href="http://www.zhongguozhixie.com.cn/#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.zhongguozhixie.com.cn:80/')">设为首页</a> -->
+      </div>
+    </div>
+  </div>
+  <div class="tm main">
+    <div class="logo">
+      <a href="/" title="北京职工教育和职业培训协会官方网站"><em></em> </a>
+    </div>
+    <!-- <div class="search_ipt">
+      <form name="fm_tsearch" id="fm_tsearch" target="_blank" action="http://www.zhongguozhixie.com.cn/search_page.html" method="post">
+        <div class="search_btn">
+          <input id="top_tsearch_btn" type="submit" value="">
+        </div>
+        <div class="ipt">
+          <input id="top_tsearch_ipt" name="keyword" type="text" value="请输入搜索关键字">
+        </div>
+      </form>
+    </div> -->
+  </div>
+  <div id="top_menu" class="main">
+    <div id="top_main_menu" class="main">
+      <ul style="margin-left:20px;">
+        <li id="top_menu_index" mod="index" class="active">
+          <a href="/">首页</a>
+        </li>
+        <% Catalog.banner.each do |category| %>
+          <li onmouseover="dsm(this);" onmouseout="hsm(this);">
+            <a href="javascript:void(0);"><%= category.name %></a>
+            <div class="fgmu">
+              <% category.articles.each_with_index do |article, index| %>
+                <div class="i">
+                  <%= link_to article.title, article %>
+                </div>
+                <% if index + 1 != category.articles.count %>
+                  <div class="i"><label>|</label></div>
+                <% end -%>
+              <% end -%>
+            </div>
+          </li>
+        <% end -%>
+      </ul>
+    </div>
+  </div>
+</div>

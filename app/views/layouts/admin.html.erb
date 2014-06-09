@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="GBK">
+    <title>管理后台</title>
+    <%= javascripts :defaults, '/plugins/bootstrap/js/bootstrap.min.js' %>
+    <%= stylesheets 'common','/plugins/bootstrap/css/bootstrap.css',
+    	'/plugins/bootstrap/css/bootstrap-responsive.min.css','admin'
+     %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80" style="margin-top: 36px; ">
+
+  <!-- Navbar
+    ================================================== -->
+ <div class="navbar navbar-fixed-top">
+   <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/"></a>
+        <div class="nav-collapse collapse" id="main-menu">
+          <ul class="nav" id="main-menu-left">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">网站内容管理<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <%= menu "栏目管理", admin_catalogs_path, Catalog %>
+                <%= menu "文章管理", admin_articles_path, Article %>
+                <%= menu "图片管理", admin_pictures_path, Picture %>
+              </ul>
+            </li>
+            
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">系统管理<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <%#= menu "角色管理", admin_roles_path, Role %>
+                <%= menu "用户管理", admin_users_path, User, :last %> 
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav pull-right" id="main-menu-right"> 
+            <li>
+              <a><%= current_user.email %></a>
+            </li>  
+            <li>
+              <%= link_to '登出 <i class="icon-share-alt"></i>'.html_safe, destroy_user_session_path, :method => :delete  %></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="rows mt25" id="main">
+      <%= render_breadcrumb %>
+      <%= render "shared/flash_msg"%>
+      <%= yield %>
+    </div>
+  </div>
+  <hr>
+  <footer id="footer" class="tc">
+    By Mumway 2013
+  </footer>
+</body></html>

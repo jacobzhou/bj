@@ -1,0 +1,21 @@
+<%= render "shared/bj_right" %>
+<div class="index_main_left">
+  <div class="detele_1">
+    <div class="detele_1 xxlb">
+      <div class="dh">
+        当前位置：
+        <a href="/">协会首页 </a> &gt;
+        <%= link_to @article.catalog.name, catalog_path(@article.catalog) %>
+      </div>
+      <div class="gjz_c">
+        <div class="xhjs_nr_title">
+          <%= @article.title.html_safe %>
+        </div>
+        <div class="detele_line xxlb_lin"></div>
+        <div class="xxxlb_xx">
+          <%= @article.content %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
