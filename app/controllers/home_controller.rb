@@ -11,6 +11,10 @@ class HomeController < ApplicationController
     @foot_right_articles = @foot_right_catalog.articles.limit(2)
     @pics = Catalog.lx(5).first.articles.limit(6)
   end
+  
+  def test
+    dsdad
+  end
 
   def bj_index
     @gg = Picture.at("广告图片")

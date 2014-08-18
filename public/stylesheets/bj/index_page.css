@@ -28,7 +28,7 @@ img{border:0px;}
 #top .lo .atop{ color:#FFFFFF; }
 
 #top .tm{ height: 59px; margin-top: 20px; }
-#top .tm .logo{float :left; padding:0; margin:0; width:544px;height:52px; background :url(/images/bj/logo.png) 0px 0px no-repeat ; text-align: left;}
+#top .tm .logo{float :left; padding:0; margin:0; width:544px;height:52px; background :url(/images/logo.png) 0px 0px no-repeat ; text-align: left;}
 #top .tm .logo a em{width:544px;height:52px;display: block;overflow: hidden;cursor: pointer;}
 
 #top .tm .search_ipt{ float: right; padding: 9px 0px; margin:0; width:377px;height:32px;background :url(/images/bj/search_ipt.gif) 0px 0px no-repeat;  }

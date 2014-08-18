@@ -27,6 +27,7 @@ Bj::Application.routes.draw do
   root :to => "home#bj_index"
   get 'admin' => "admin/home#index"
   get 'dynamic_selects' => "main#selects"
+  get 'test' => "home#test"
   # 富文本编辑器图片上传
   post 'kindeditor/upload'
   # END ADMIN

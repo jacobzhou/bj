@@ -1,7 +1,8 @@
 source 'http://ruby.taobao.org'
 
 gem 'rails', '3.0.20'
-gem 'mysql2', '0.2.6'
+gem 'mysql2', '0.2.18'
+gem 'rake', '0.9.2.2'
 
 # jquery 1.9
 # gem "jquery-rails", '2.2.1'
