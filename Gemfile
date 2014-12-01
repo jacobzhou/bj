@@ -1,5 +1,5 @@
 source 'http://ruby.taobao.org'
-
+# test
 gem 'rails', '3.0.20'
 gem 'mysql2', '0.2.18'
 gem 'rake', '0.9.2.2'
